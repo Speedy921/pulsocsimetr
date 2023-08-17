@@ -22,8 +22,8 @@
                     <span>Garmin, Polar, Suunto</span>
                 </div>
                 <div class="header__contacts">
-                    <a href="tel:+380679228974" class="header__phone">+38 (067) 922-89-74</a>
-                    <button class="button">замовити дзвінок</button>
+                    <a href="tel:+380671111111" class="header__phone">+38 (067) 111-11-11</a>
+                    <button data-modal="consultation" class="button">замовити дзвінок</button>
                 </div>
             </header>
 
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">замовити консультацію</button>
+                <button data-modal="consultation" class="button button_main">замовити консультацію</button>
                 <div class="promo__link">
                     або
                     <a href="#">ПЕРЕЙТИ У КАТАЛОГ</a>
@@ -110,9 +110,9 @@
                 Лише заповніть форму<br> 
                 та ми зателефонуємо Вам напротязі 10 хв
             </div>
-            <form class="feed-form" action="#">
+            <form id="consultation-form" class="feed-form" action="#">
                 <input name="name" required placeholder="Ваше імя" type="text"> 
-                <input name="phone" required placeholder="Ваш телефон" type="number"> 
+                <input name="phone" required placeholder="Ваш телефон"> 
                 <input name="email" required placeholder="Ваш E-mail" type="email"> 
 
                 <button class="button button_submit">замовити консультацію</button>
@@ -141,7 +141,7 @@
             <h2 class="title">Каталог пульсометрів</h2>
             <ul class="catalog__tabs">
                 <li class="catalog__tab catalog__tab_active"><div>Для фітнесу</div></li>
-                <li class="catalog__tab"><div>для біга</div></li>
+                <li class="catalog__tab"><div>для бігу</div></li>
                 <li class="catalog__tab"><div>для триатлона</div></li>
             </ul>
 
@@ -424,7 +424,7 @@
                             </li>
                             <li>
                                 Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;
-                            </li>
+                            </li
                             <li>
                                 Також Ви побачите інформацію про витрати калорій за тренування;</li>
                             <li>
@@ -491,9 +491,63 @@
         </div>
     </section>
 
+     <footer class="footer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4659.639230864715!2d30.523901858349642!3d50.44694148294154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce517313ffff%3A0xa447b8f0aa513128!2z0JPQu9C-0LHRg9GB!5e0!3m2!1sru!2sua!4v1692195726375!5m2!1sru!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="footer__info">
+            <address class="footer__addr">Київ, Інститутська 2, Глобус</address>
+            <a class="footer__phone" href="tel:380671111111">+38 (067) 111-11-11</a>
+            <div class="footer__social">
+                <a href="#" class="footer__social-item"><img src="icons/facebook.svg" alt="facebook"></a>
+                <a href="#" class="footer__social-item"><img src="icons/instagram.svg" alt="instagram"></a>
+                <a href="#" class="footer__social-item"><img src="icons/pinterest.svg" alt="pinterest"></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заповніть форму заявки</div>
+            <div class="modal__descr">і ми перетелефонуємо Вам напротязі 10 хвилин</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required placeholder="Ваше імя" type="text"> 
+                <input name="phone" required placeholder="Ваш телефон"> 
+                <input name="email" required placeholder="Ваш E-mail" type="email"> 
+
+                <button class="button button_submit">замовити консультацію</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваше замовлення:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required placeholder="Ваше имя" type="text"> 
+                <input name="phone" required placeholder="Ваш телефон"> 
+                <input name="email" required placeholder="Ваш E-mail" type="email"> 
+
+                <button class="button button_submit">придбати</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Дякуємо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер зателефонує Вам 
+                у найблиищий час!</div>
+        </div>
+    </div>
+
+
+        
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </body>
